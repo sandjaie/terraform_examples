@@ -1,0 +1,2 @@
+#reload supervisor
+supervisorctl reload

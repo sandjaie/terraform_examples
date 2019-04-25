@@ -1,0 +1,14 @@
+bind: 0.0.0.0:7070      # address and port to bind on
+allow-transfers: true   # allow log file downloads
+follow-names: false     # allow tailing of not-yet-existent files
+relative-root: ''       # web app root path (default: '')
+commands: [tail, grep]  # allowed commands
+tail-lines: 10          # number of lines to tail initially
+wrap-lines: true        # initial line-wrapping state
+#extra-files-dir: /etc/tailon/files.d/
+
+files:
+  - '/var/log/auth.log'
+  - '/var/log/tailon-log.log'
+  - '/var/log/nginx/*.log'
+  - '/var/log/syslog'
